@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.v2018_1.*
 import jetbrains.buildServer.configs.kotlin.v2018_1.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2018_1.vcs.GitVcsRoot
+import jetbrains.buildServer.configs.kotlin.v2018_1.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -91,6 +92,11 @@ object id02Firefox : BuildType({
 
     dependencies {
         snapshot(id01FastTests) {
+        }
+    }
+    triggers {
+        vcs{
+            id = "vcsTrigger"
         }
     }
 })
