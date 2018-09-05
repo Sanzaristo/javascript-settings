@@ -42,6 +42,7 @@ object id01FastTests : BuildType({
     templates(Template_1)
     id("01FastTests")
     name = "01. Fast Tests"
+    description = "my phantomJS tests"
 
     params {
         param("Browser", "PhantomJS")
