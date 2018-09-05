@@ -94,11 +94,6 @@ object id02Firefox : BuildType({
         snapshot(id01FastTests) {
         }
     }
-    triggers {
-        vcs{
-            id = "vcsTrigger"
-        }
-    }
 })
 
 object id03DeployToStaging : BuildType({
@@ -117,6 +112,11 @@ object id03DeployToStaging : BuildType({
         snapshot(id02Chrome) {
         }
         snapshot(id02Firefox) {
+        }
+    }
+    triggers {
+        vcs{
+            id = "vcsTrigger"
         }
     }
 })
